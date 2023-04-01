@@ -7,7 +7,8 @@
 }
 
 :root {
-  --button-color: #d97652;
+  --main-color: #d97652;
+  --section-about-img-border-radius: 30px;
 }
 
 html {
@@ -27,17 +28,12 @@ html {
   position: absolute;
 }
 
-/* 테스트 후 제거 */
-body {
-  height: 5000px;
-}
-
 /* 버튼 속성 통일 */
 button {
   color: white;
   font-size: 1.6rem;
   font-weight: 700;
-  background-color: var(--button-color);
+  background-color: var(--main-color);
   border-radius: 40px;
   width: 140px;
   height: 50px;
@@ -47,6 +43,8 @@ button {
 
 /* 헤더 */
 header {
+  width: 100%;
+  min-width: 1220px;
   box-shadow: inset 0 0 10px red;
   background: #f2e9d8;
   position: sticky;
@@ -68,9 +66,146 @@ header {
   display: block;
 }
 
+/* 메인 */
 main {
+  width: 100%;
   box-shadow: inset 0 0 10px red;
 }
+
+/* 홈 섹션 */
+.section-home {
+  background-color: #f2e9d8;
+  box-shadow: inset 0 0 10px green;
+  display: flex;
+  padding: 0 320px;
+  gap: 128px;
+}
+
+.section-home .contents {
+  margin-top: 200px;
+}
+
+.section-home_title {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+.section-home_des {
+  margin: 40px 0;
+  font-size: 1.6rem;
+}
+
+/* 어바웃 섹션 */
+.section-about {
+  box-shadow: inset 0 0 10px blue;
+  background-color: #fff;
+  padding-top: 80px;
+}
+
+.section-about img {
+  border-radius: var(--section-about-img-border-radius);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.section-about_intro {
+  display: flex;
+  padding: 0 320px;
+  gap: 110px;
+}
+
+.section-about_intro .intro-wrapper {
+  width: 510px;
+  align-self: center;
+}
+
+.section-about_intro .intro-wrapper .intro-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.section-about_intro .intro-wrapper .intro-des {
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+.section-about_title,
+.section-about_des {
+  text-align: center;
+}
+
+.section-about_title {
+  color: var(--main-color);
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin: 120px auto 30px auto;
+}
+
+.section-about_des {
+  font-size: 1.6rem;
+  width: 740px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-about_des strong {
+  color: var(--main-color);
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 70px;
+  padding: auto;
+  margin: 90px auto;
+}
+
+.section-about_learn-more {
+  display: flex;
+  margin: auto 30%;
+  justify-content: space-between;
+  gap: 52px;
+}
+
+.learn-more_des {
+  font-size: 1.6rem;
+  width: 740px;
+  text-align: start;
+}
+
+.btn-learn-more {
+  flex-shrink: 0;
+}
+
+.subscribe {
+  margin: auto;
+  display: flex;
+  background-color: #263140;
+  color: #fff;
+  max-width: 1280px;
+  min-height: 200px;
+  border-radius: 30px;
+  justify-content: center;
+}
+
+.subscribe-wrapper {
+  align-self: center;
+}
+
+.subscribe_title {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.subscribe_des {
+  font-size: 1.4rem;
+  width: 491px;
+}
+
+.form-subscribe {
+  background-color: #fff;
+}
+
 footer {
   box-shadow: inset 0 0 10px red;
+  width: 100%;
 }
